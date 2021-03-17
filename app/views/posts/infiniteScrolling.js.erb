@@ -1,0 +1,5 @@
+if("<%=@nextPage%>" != "last"){
+  $("#infiniteScrollingContainer > div").append("<%= escape_javascript(render :partial => 'templates/posts/list') %>");
+}else{
+}
+$("#infiniteScrollingContainer").attr('data-page', "<%=@nextPage%>")
